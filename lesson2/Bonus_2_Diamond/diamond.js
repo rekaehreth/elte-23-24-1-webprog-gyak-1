@@ -1,3 +1,8 @@
+// Excercise: https://codingdojo.org/kata/Diamond/
+// Have an input field where the widest point of the diamond can be given. 
+// After clicking on a button next to the input, display the diamond 
+// If the input is not valid as the widest point of the diamond, display an error message. 
+
 const alphabet = [
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
   "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",

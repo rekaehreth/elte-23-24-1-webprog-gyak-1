@@ -1,3 +1,6 @@
+// Excercise 9 from http://webprogramozas.inf.elte.hu/#!/subjects/webprog-pti/gyak/02
+// When loading the site, create a table of contents (ToC) from the headers (h1, h2, h3, h4, etc.)
+
 const tocContainer = document.querySelector("#toc");
 const headers = document.querySelectorAll("h1, h2, h3");
 

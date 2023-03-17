@@ -1,4 +1,5 @@
-// Oldalbetöltéskor listázd ki az oldal összes hiperhivatkozásának a címét!
+// Excercise 8 from http://webprogramozas.inf.elte.hu/#!/subjects/webprog-pti/gyak/02
+// When loading the site, list all hyperlinks from it
 
 const elementsWithReference = document.querySelectorAll("[href]");
 const referenceList = document.querySelector("#hivatkozasok");
