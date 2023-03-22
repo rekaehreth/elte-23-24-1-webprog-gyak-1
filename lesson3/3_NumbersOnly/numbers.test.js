@@ -6,27 +6,27 @@
 
 const dataProvider = [
     {
-        message: "Non-numeric characters don't appear in the input",
         assertion: () => {
             let input = document.querySelector('input');
         
             input.value = 'a';
-            input.dispatchEvent(new Event('input'));
+            const inputEvent = new InputEvent('input', { bubbles: true });
+            input.dispatchEvent(inputEvent);
 
             const expectation = input.value === '';
             input.value = '';
 
             return expectation;
         },
+        message: "Non-numeric characters don't appear in the input",
     },
     {
-        message: "Keeps valid part of input",
         assertion: () => { 
             let input = document.querySelector('input');
-            const inputEvent = new Event('input');
+            const inputEvent = new InputEvent('input', { bubbles: true });
 
-            input.value = '234';
-            input.dispatchEvent();
+            input.value = '234';            
+            input.dispatchEvent(inputEvent);
 
             input.value = 'c';
             input.dispatchEvent(inputEvent);
@@ -36,12 +36,12 @@ const dataProvider = [
 
             return expectation;
         },
+        message: "Keeps valid part of input",
     }, 
     {
-        message: "Accepts empty input",
         assertion: () => { 
             let input = document.querySelector('input');
-            const inputEvent = new Event('input');
+            const inputEvent = new InputEvent('input', { bubbles: true });
 
             input.value = '2';
             input.dispatchEvent(inputEvent);
@@ -53,24 +53,27 @@ const dataProvider = [
 
             return expectation;
         },
+        message: "Accepts empty input",
     }, 
     {
-        message: "Works for every input with class number",
         assertion: () => { 
             let expectation = true;
             let numberClassInputs = document.querySelectorAll('input.number');
+            const inputEvent = new InputEvent('input', { bubbles: true });
+
             numberClassInputs.forEach(input => {
                 input.value = '234';
-                input.dispatchEvent(new Event('input'));
+                input.dispatchEvent(inputEvent);
     
                 input.value = 'c';
-                input.dispatchEvent(new Event('input'));
+                input.dispatchEvent(inputEvent);
     
                 expectation = input.value === '234';
                 input.value = '';
             })
             return expectation;
         },
+        message: "Works for every input with class number",
     }, 
 ];
 
