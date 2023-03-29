@@ -1,0 +1,86 @@
+@font-face {
+    font-family: BookInsanityRemake;
+    src: url("https://cdn.jsdelivr.net/gh/jonathonf/solbera-dnd-fonts@master/Bookinsanity/Bookinsanity.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: BookInsanityRemake;
+    src: url("https://cdn.jsdelivr.net/gh/jonathonf/solbera-dnd-fonts@master/Bookinsanity/Bookinsanity%20Bold.otf");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: BookInsanityRemake;
+    src: url("https://cdn.jsdelivr.net/gh/jonathonf/solbera-dnd-fonts@master/Bookinsanity/Bookinsanity%20Italic.otf");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  body {
+    background-image: url("https://homebrewery.naturalcrit.com/assets/parchmentBackground.jpg");
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 500px;
+    font-family: BookInsanityRemake;
+  }
+  
+  button {
+    background-color: rgba(128, 0, 0, 0.25);
+    border-radius: 6px;
+    color: maroon;
+    font-family: BookInsanityRemake;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    border: solid 2px maroon;
+    margin: 20px 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  #roll-result {
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: rgba(128, 0, 0, 0.35);
+  }
+  
+  button:active {
+    background-color: rgba(128, 0, 0, 0.45);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats {
+    border-bottom: solid maroon 2px;
+    border-top: solid maroon 2px;
+    display: flex;
+    padding: 20px 0;
+  }
+  
+  .stats__stat {
+    border-radius: 6px;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 6px;
+    text-align: center;
+  }
+  
+  .stats__stat:hover {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats__name {
+    font-weight: bold;
+  }
+  
+  .stats__modifier {
+    font-style: italic;
+  }
+  
